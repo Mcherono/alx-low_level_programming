@@ -1,7 +1,7 @@
 #include<stdio.h>
-/*
- *main: this is where the program starts
- *return 0: returns 0 evertime
+/**
+ *main - this is where the program starts
+ *return: returns 0
  */
 int main(void)
 {
