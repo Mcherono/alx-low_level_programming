@@ -1,6 +1,7 @@
 #include<stdio.h>
 /*
- * the code is abou using put function
+ *main: this is where the program starts
+ *return 0: returns 0 evertime
  */
 int main(void)
 {
