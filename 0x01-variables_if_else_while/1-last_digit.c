@@ -2,7 +2,7 @@
 #include<time.h>
 #include<stdio.h>
 /**
-*main - the start of theexecution
+*main - the start of the execution
 *Return: returns 0
 */
 int main(void)
