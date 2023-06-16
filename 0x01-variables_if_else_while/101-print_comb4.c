@@ -18,7 +18,7 @@ int main(void)
 				if (!((a == b) || (b == c) || (b > a) || (c > b)))
 				{
 					putchar(c);
-					puchar(b);
+					putchar(b);
 					putchar(a);
 					if (!(a == '9' && c == '7' && b == '8'))
 					{
