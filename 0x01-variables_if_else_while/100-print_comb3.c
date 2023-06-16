@@ -5,8 +5,8 @@
 */
 int main(void)
 {
-	int n = '0';
-	int m = '0';
+	int n;
+	int m;
 
 	for (m = '0'; m <= '9'; m++)
 	{
