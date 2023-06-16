@@ -5,16 +5,16 @@
 */
 int main(void)
 {
-	int a = 97;
-	int b = 65;
+	int n = 97;
+	int m = 65;
 
-	while (a <= 122)
+	while (n <= 122)
 	{
-		putchar(a);
+		putchar(n);
 	}
-	while (b <= 90)
+	while (m <= 90)
 	{
-		putchar(b);
+		putchar(m);
 	}
 	putchar('\n');
 	return (0);
