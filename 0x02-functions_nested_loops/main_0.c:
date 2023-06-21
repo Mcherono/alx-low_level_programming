@@ -1,0 +1,5 @@
+n_0.c:13:6: error: implicit declaration of function ‘print_last_digit’; did you mean ‘print_lst_digit’? [-Werror=implicit-function-declaration]
+   13 |  r = print_last_digit(98);
+      |      ^~~~~~~~~~~~~~~~
+      |      print_lst_digit
+cc1: all warnings being treated as errors
