@@ -19,6 +19,7 @@ int print_sign(int n)
 		return (0);
 	}
 	else if (n < 0)
+	{
 		_putchar(45);
 		return (-1);
 	}
