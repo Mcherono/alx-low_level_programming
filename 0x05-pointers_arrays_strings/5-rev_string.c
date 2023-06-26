@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include "main.h"
 /**
-*rev_string - update value.
-*@s: value to be evaluate.
-*Return: not.
-*/
+ *rev_string - update value.
+ *@s: value to be evaluate.
+ *Return: not.
+ */
 void rev_string(char *s)
 {
 int len = 0;
