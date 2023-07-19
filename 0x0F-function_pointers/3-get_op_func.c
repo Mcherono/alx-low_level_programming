@@ -1,15 +1,16 @@
-#include "3-calc.h"
+#include"3-calc.h"
 /**
-* get_op_func - Retrieves function operator for given operation
-* @s: char pointer
-* Return: Pointer to callback function
+ * get_op_func - get the operator and redirect to the func.
+ * @s: the operator
+(* a blank line
+* Description: get the operator and redirect to the func.)?
+(* section header: 3-calc.h)*
+* Return: return null or the function to do.
 */
 
 int (*get_op_func(char *s))(int, int)
 {
-
 	op_t ops[] = {
-
 		{"+", op_add},
 		{"-", op_sub},
 		{"*", op_mul},
@@ -17,22 +18,15 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
+	int i;
 
-
-	int i = 0;
-
-
-
-/* while 1< 4, s and s[0] (args) == pos. in struct.s[1] is empt =? true */
-
-	while (i <= 4)
+	i = 0;
+	while (i < 5)
 	{
-
-		if (s && s[0] == ops[i].op[0] && !s[1])
+		if (strcmp(s, ops[i].op) == 0)
 		{
-			return (ops[i].f);
+			return (*(ops[i]).f);
 		}
-
 		i++;
 	}
 	return (NULL);
