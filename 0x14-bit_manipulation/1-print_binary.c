@@ -6,8 +6,8 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int timp;
-	int relocate;
+	unsigned long int t;
+	int r;
 
 	if (n == 0)
 	{
@@ -15,12 +15,12 @@ void print_binary(unsigned long int n)
 		return;
 	}
 
-	for (timp = n, relocate = 0; (timp >>= 1) > 0; relocate++)
+	for (t = n, r = 0; (t >>= 1) > 0; r++)
 		;
 
-	for (; relocate >= 0; relocate--)
+	for (; r >= 0; r--)
 	{
-		if ((n >> relocate) & 1)
+		if ((n >> r) & 1)
 			printf("1");
 		else
 			printf("0");
