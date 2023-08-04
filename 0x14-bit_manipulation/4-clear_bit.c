@@ -1,24 +1,21 @@
-#include "main.h"
+#include <stdlib.h>
 #include <stdio.h>
+#include "holberton.h"
+
 /**
- * clear_bit - sets the value of a bit to 0
- * @m: pointer to number to change
- * @index: position to change
- * Return: 1 if successful
- */
-int clear_bit(unsigned long int *m, unsigned int index)
+  * clear_bit - Sets the value of a bit to 0 at a given index
+  * @n: The number to modify
+  * @index: The index in the number to modify
+  *
+  * Return: 1 if it worked, or -1 if an error occurred
+  */
+int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int k;
-	unsigned int g;
+	if (index < sizeof(unsigned long int) * 8)
+	{
+		*n &= (~(1 << index));
+		return (1);
+	}
 
-	if (index > 64)
-		return (-1);
-	g = index;
-	for (i = 1; g > 0; i *= 2, g--)
-		;
-
-	if ((*m >> index) & 1)
-		*m -= k;
-
-	return (1);
+	return (-1);
 }
