@@ -1,23 +1,15 @@
-#include "main.h"
+#include "holberton.h"
 /**
-* flip_bits - flips bits converingt one number to another number
- * @n: first number
- * @m: second number
- * Return: the tally
+ * clear_bit - Entry Point
+ * @n: input
+ * @index: index
+ * Return: 0
  */
-unsigned int flip_bits(unsigned long int n, unsigned long int m)
+	int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int timp;
-	int tally;
+	if (index > 63)
+		return (-1);
 
-	timp = n ^ m;
-	tally = 0;
-
-	while (timp)
-	{
-		tally++;
-		timp &= (timp - 1);
-	}
-
-	return (tally);
+	*n = *n & ~(1ul << index);
+	return (1);
 }
