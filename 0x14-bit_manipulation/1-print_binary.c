@@ -1,28 +1,39 @@
-#include "main.h"
-/**
-*print_binary - prints binary representation
-*@i: the number to print in binary form
-*/
-void print_binary(unsigned long int i)
-{
-	unsigned long int j;
-	int k;
+#include <stdlib.h>
+#include <stdio.h>
+#include "holberton.h"
 
-	if (i == 0)
+/**
+  * print_binary - Prints the binary representation of a number
+  * @n: The number to representing in binary
+  *
+  * Return: Nothing
+  */
+void print_binary(unsigned long int n)
+{
+	if (n == 0)
 	{
-		printf("0");
+		_putchar('0');
 		return;
 	}
 
-	for (j = n, k = 0; (j >>= 1) > 0; k++)
-		;
+	_divide(n);
+}
 
+/**
+  * _divide - ...
+  * @n: ...
+  *
+  * Return: ...
+  */
+void _divide(unsigned long int n)
+{
+	if (n < 1)
+		return;
 
-	for (; k >= 0; k--)
-	{
-		if ((i >> k) & 1)
-			printf("1");
-		else
-			printf("0");
-	}
+	_divide(n >> 1);
+
+	if (n & 1)
+		_putchar('1');
+	else
+		_putchar('0');
 }
