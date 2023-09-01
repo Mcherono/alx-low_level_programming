@@ -1,21 +1,17 @@
 #include "main.h"
 
 /**
- * set_bit - sets value of bit to 1 for  a given index
- * @n: decimal number passed by the linker
- * @index: index position to change,from 0
- * Return: 1 if it worked, -1 on fail
+ * set_bit - sets a bit at a given index to 1
+ * @n: pointer to the number to change
+ * @index: index of the bit to set to 1
+ *
+ * Return: 1 for success, -1 for failure
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int m;
-
-	if (index > 64)
+	if (index > 63)
 		return (-1);
 
-	for (m = 1; index > 0; index--,  *= 2)
-		;
-	*n += m;
-
+	*n = ((1UL << index) | *n);
 	return (1);
 }
